@@ -1,0 +1,185 @@
+@import "./HeaderVariable.scss";
+// 相關var參數來自於base.scss
+
+
+.header-logo-container {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 14px;
+    height: var(--header-height);
+    width: var(--header-logo-width);
+}
+nav.navbar-menu {
+    display: flex;
+    flex-grow: 1;
+    background-color: inherit;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--main-text);
+    text-decoration: none;
+
+    &:hover, &:active {
+        color: var(--secondary-text);
+        --main-text: var(--secondary-text);
+    }
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: inherit;
+
+    &.site-menu-list {
+        max-width: calc(50% - var(--header-logo-width) / 2 - #{$header-menu-item-margin-x} / 8);
+
+        .nav-item {
+            margin-left: $header-menu-item-margin-x;
+            margin-right: $header-menu-item-margin-x;
+
+            &:first-child {
+                margin-left: 0px;
+            }
+        }
+    }
+    &.site-action-list {
+        max-width: calc(50% - var(--header-logo-width) / 2 - #{$header-action-item-margin-x} / 8);
+
+        .nav-item {
+            margin-left: $header-action-item-margin-x;
+            margin-right: $header-action-item-margin-x;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+
+.nav-item {
+    cursor: pointer;
+}
+
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    
+    &:hover, &:active {
+        color: var(--secondary-text);
+        --main-text: var(--secondary-text);
+    }
+}
+
+.header-logo-container {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 14px;
+    height: var(--header-height);
+    width: var(--header-logo-width);
+}
+
+
+
+//header
+header.site-header {
+    position: sticky;
+    top: 0px;
+    padding-left: var(--site-edge-margin);
+    padding-right: var(--site-edge-margin);
+    background-color: var(--background-color);
+    text-align: center;
+    z-index: 100;
+
+    .header-container {
+        display: flex;
+        position: relative;
+        max-width: 1100px;
+        height: var(--header-height);
+        background-color: var(--background-color);
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width: $screen-break-point){
+    header.site-header {
+        label.burger-container {
+            display: flex;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            align-items: center;
+        }
+    }
+    nav.navbar-menu {
+    display: block;
+    margin-top: var(--header-height);
+    opacity: 0;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, opacity 0.3s;
+    }
+
+    input#navbar-toggle:checked ~ nav.navbar-menu {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .nav-link {
+        display: block;
+    }
+        .nav-list {
+        justify-content: center;
+
+        &.site-menu-list {
+            max-width: unset;
+            flex-direction: column;
+
+            .nav-item {
+                margin: 0px;
+
+                &::after {
+                    position: absolute;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 0px;
+                    border-bottom: 1px solid rgba(42, 42, 42, 0.1);
+                    content: "";
+                }
+
+                &:first-child {
+                    padding-top: 0px;
+                }
+                &:nth-child(4) {
+                    order: 1;
+                }
+            }
+        }
+        &.site-action-list {
+            max-width: unset;
+        }
+    }
+
+    .nav-item {
+        position: relative;
+        padding: 24px 0;
+        &:active {
+            background-color: var(--active-color);
+            .nav-link {
+                color: var(--secondary-text);
+            }
+        }
+    }
+}

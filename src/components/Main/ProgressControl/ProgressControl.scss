@@ -1,0 +1,54 @@
+//ProgressControl
+section.progress-control-container {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+section.button-group {
+    padding-top: 24px;
+    border-top: 1px solid #E6E6EB;
+
+    button {
+        display: flex;
+        align-items: center;
+        height: 46px;
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        border-radius: 8px;
+        border-width: 0px;
+        padding: 0px;
+
+        & > object {
+            width: 24px;
+            height: 24px;
+        }
+
+        &.prev {
+            background-color: transparent;
+            line-height: 20px;
+            font-weight: 400;
+            color: #000000;
+            cursor: pointer;
+
+            > img {
+                margin-right: 12px;
+            }
+        }
+        &.next {
+            justify-content: center;
+            width: 174px;
+            font-weight: 500;
+            line-height: 17px;
+            background: var(--pink);
+            color: #FFFFFF;
+            margin-left: auto;
+            cursor: pointer;
+
+            > img {
+                margin-left: 12px;
+            }
+        }
+    }
+}

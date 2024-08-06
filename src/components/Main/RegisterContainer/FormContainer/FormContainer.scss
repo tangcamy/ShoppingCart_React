@@ -1,0 +1,17 @@
+//FormContainer
+section.form-container {
+    display: flex;
+    margin-top: 64px;
+
+    h3.form-title {
+        display: flex;
+        flex: 0 0 100%;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+
+section.form-body .col {
+    justify-content: space-between;
+}

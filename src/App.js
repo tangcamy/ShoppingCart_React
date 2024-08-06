@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/reset.scss";
+import "./styles/base.scss";
+import "./styles/dark-theme.scss";
+import Header from './components/Header/Header.js'
+import Footer from "./components/Footer/Footer.js";
+import Main from "./components/Main/Main.js";
+import { useState } from "react";
+//import './App.css';原本預測的css，可以先註解掉
+
 
 function App() {
+  let [step, setStep] = useState(1);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Main step={step} setStep={setStep}/>
+      <Footer/>
     </div>
   );
 }

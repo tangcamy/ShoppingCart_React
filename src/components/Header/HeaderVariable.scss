@@ -1,0 +1,19 @@
+//這行導入了另一個 SCSS 文件 _variables.scss，該文件中可能包含了其他變量或者通用的樣式定義，使得這些變量可以在當前的 SCSS 文件中使用。
+@import 'src/_variables.scss';
+
+//自定義兩個變數
+$header-menu-item-margin-x: 16px;
+$header-action-item-margin-x: 15px;
+
+
+:root {
+    --header-height: 60px; //用於表示頭部的高度
+    --header-logo-width: 170px; //用於表示頭部 Logo 的寬度
+}
+
+@media screen and (max-width: $screen-break-point){
+    :root {
+        --header-height: 56px;
+        --header-logo-width: 136px;
+    }
+}

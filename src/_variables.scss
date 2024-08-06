@@ -1,0 +1,10 @@
+// 引用 Sass 的 math 模塊，允許在 Sass 中進行數學計算。
+@use 'sass:math';
+
+//定義屏幕斷點變量
+$screen-break-point: 750 px;
+
+//引用GoogleFont字型
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
