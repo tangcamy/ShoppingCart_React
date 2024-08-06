@@ -71,10 +71,10 @@ webpack compiled successfully
    - 【資料夾】：ProgressElement（ButtonGroup、NextButton、PrevButton、ConfirmButton）
 
   #### 3-3 Cart 購物籃資料夾
-    - `Cart.js`：主頁面
-    - `Cart.scss`：特性
-    - 【資料夾】:CartElements(按鈕功能)
-      - `Elements.js`：功能function
-      - `Elements.scss`:特性
+  - `Cart.js`：主頁面
+  - `Cart.scss`：特性
+  - 【資料夾】:CartElements(按鈕功能)
+    - `Elements.js`：功能function
+    - `Elements.scss`:特性
 
 
