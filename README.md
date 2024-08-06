@@ -57,23 +57,23 @@ webpack compiled successfully
   #### 3-1 RegisterContainer 表格資料夾
   - `RegisterContainer.js`：主頁面
   - `RegisterContainer.scss`：定義許多css樣式的變化（控制不同階段的表單和按鈕組顯示與隱藏）。
-  * StepProgress：標示「寄送地址」、「運送方式」和「付款資訊」三個操作階段的元件
+  -【StepProgress】：標示「寄送地址」、「運送方式」和「付款資訊」三個操作階段的元件
     -  `StepProgress.js`
     -  `SteProgress.scss`
-  * FromContainer:包含三個不同步驟的元件，用於輸入寄送地址、選擇運送方式和填寫付款資訊。
+  -【FromContainer】:包含三個不同步驟的元件，用於輸入寄送地址、選擇運送方式和填寫付款資訊。
     - `FormContainer.js`
     - `FormContainer.scss`
-    - 資料夾：FormElements（Step1,Step2,Step3）
+    - 【資料夾】：FormElements（Step1,Step2,Step3）
 
    #### 3-2 ProgressControl:依據不同的data-phase，控制操作進度包含「上一步」、「下一步」和「確認下單」的按鈕。
    - `ProgressControl.js`:流程控制，並將需要的文件資訊帶入
    - `ProgressControl.scss`:特性
-   * 資料夾：ProgressElement（ButtonGroup、NextButton、PrevButton、ConfirmButton）
+   - 【資料夾】：ProgressElement（ButtonGroup、NextButton、PrevButton、ConfirmButton）
 
   #### 3-3 Cart 購物籃資料夾
     - `Cart.js`：主頁面
     - `Cart.scss`：特性
-    - 資料夾:CartElements(按鈕功能)
+    - 【資料夾】:CartElements(按鈕功能)
       - `Elements.js`：功能function
       - `Elements.scss`:特性
 
