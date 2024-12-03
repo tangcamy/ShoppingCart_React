@@ -3,6 +3,7 @@ import CartSample from "../../../CartSample.js";
 
 function Step3() {
     return <CartSample.Consumer>
+        {/* register是自訂義新文件的名稱,register.carName（表示新增的欄位名稱） */}
         {({ register, setRegister }) => {
             function onChange(callback) {
                 return function(event) {
